@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ToDo List </title>
+    <link rel="stylesheet" type="text/css" href="./styles/styles.css">
+    <link href="https://css.gg/css" rel="stylesheet" />
+
+</head>
+<body>
+<div class = "container">
+<div class="buttons">
+    <div class="button1">
+        <form action="/" method="get">
+            <button class="btn">Today</button>
+        </form>
+    </div>
+    <div class="button2">
+        <form action="/work" method="get">
+            <button class="btn">Work</button>
+        </form>
+    </div>
+</div>
+<div class = "date">
+    <h1><%=dayTime%>, It's <%=day%>, <%=month%> <%=currentDate%></h1>
+
+
+
+</div>
+<div class="task-list">
+    <ul>
+        <% tasks.forEach(task => { %>
+            <li>
+                <label>
+                    <input type="checkbox" class="cbox">
+                    <span><%= task %></span>
+                </label>
+            </li>
+        <% }); %>
+    </ul>
+
+
+
+    <form action="/addtask" method="post">
+
+    <input type="text" id="task" name="task" placeholder="Add Item">
+    <button type="submit" class="css-button-fully-rounded--sky">Add</button>
+</form>
+
+</div>
+<div class = "footer">
+<h4><a href = "https://t.me/senpai_kush_420">Made with ♥️ by Tim (Click me)</a></h4>
+</div>
+</div>
+</body>
+</html>
+
+
+
